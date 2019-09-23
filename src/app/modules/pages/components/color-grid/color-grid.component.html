@@ -1,0 +1,19 @@
+<mat-grid-list cols="3" rowHeight="200px">
+    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+        <mat-card ngxClipboard (cbOnSuccess)="copied(tile)" [cbContent]="'target string'">
+            <!--  -->
+            <mat-card-header>
+                <mat-card-subtitle>{{tile.year}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-card-subtitle>{{tile.name}}</mat-card-subtitle>
+                <mat-card-title>{{tile.color}}</mat-card-title>
+            </mat-card-content>
+            <mat-card-actions>
+                {{tile.pantone_value}}
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+<mat-paginator [length]="pagination.length" [pageSize]="pagination.pageSize" [pageSizeOptions]="pagination.pageSizeOptions" (page)="page($event)">
+</mat-paginator>

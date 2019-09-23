@@ -1,0 +1,23 @@
+:host {
+    mat-grid-list {
+        margin: 5% 5% 0 5%;
+        mat-grid-tile {
+            border-radius: .5em;
+            padding: 0;
+            mat-card {
+                max-width: 400px;
+                width: 100%;
+                background: transparent;
+                box-shadow: none;
+                padding: 0;
+                mat-card-content {
+                    text-align: center;
+                }
+                mat-card-actions {
+                    text-align: end;
+                    margin-right: 5%;
+                }
+            }
+        }
+    }
+}

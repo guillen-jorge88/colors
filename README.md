@@ -1,27 +1,38 @@
 # Colors
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
 
-## Development server
+El proyecto se basa en una grilla en donde se presentan varios colores los cuales puedenser copiado en el porta papeles al dar click en cada color. tambien podremos cambiar de paginas para obtene mas colores.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Modulos
 
-## Code scaffolding
+### - Material
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+        En este modulo se implemento [Angular Material](https://material.angular.io/).
 
-## Build
+        ```bash
+        ng add @angular/material
+        ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+        Se importan los modulos de Material Design en un modulo para hacer mas facil su uso en otros modulos y componentes.
 
-## Running unit tests
+### - Shared
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+        Este modulo contienen componentes como: `toolbar|page-not-found` los cuales seran compartidos en distindos modulos y componentes.
 
-## Running end-to-end tests
+### - Pages
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+        Es un mododulo que como su nombre lo indica se usara para configurar la pagibas internas de sitio en este caso solo tenemos la pagina `color-grid` la cual se carga por medio de `pages.routing.module.ts` en el componente `pages.component`.
 
-## Further help
+        contiente tres apartados `components|interfaces|services` los cuales describiremos a continuacion:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+        - Components: contiente el componente `color-grid` el cual contiente la estructura de grillas y paginacion propia de angular material.
+
+        - Interfaces: en este apartado encontraremos el modelo de datos para un `tile`.
+
+        - Services: este ultimo podremos oservar el servicio que obtiene la captura de la api [colors](https://reqres.in/api/colors).
+
+### Paqutes adicionales
+
+        se implemento un paquete de npm `ngx-clipboard` el cual se encarda que realizar el seteo del portapapel, este se intala de la siguiente manera ```npm install ngx-clipboard --save```
+        
