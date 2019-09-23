@@ -51,7 +51,7 @@ export class ColorGridComponent implements OnInit {
   }
 
   copied(obj:any){
-    console.log(obj);
+    //console.log(obj);
     let objtxt = JSON.stringify(obj);
     this._clipboardService.copyFromContent(objtxt);
     this._snackBar.open(`${obj.name} color copied`, '', {
